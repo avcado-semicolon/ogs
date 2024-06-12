@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+
+    <title>Homepage</title>
+    <link rel="icon" type="image/x-icon" href="../image/logotab.png">
+    <link rel="stylesheet" href="output.css">
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+    }
+    #map { 
+        height: 440px; 
+        width: 120%;
+        border-radius: 0.75rem/* 12px */;
+        box-shadow: 22px 7px 31px -11px rgba(0,0,0,0.75);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }  
+    .picture{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .animated{
+      animation: fade-in 2s linear infinite;
+    }
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }  
+</style>
+</head>
+<body>
+    <!-- Page Container -->
+    <div id="page-container" class="flex flex-col mx-auto w-full min-h-screen rounded bg-gray-100">
+      <!-- Page Content -->
+      <main id="page-content" class="flex flex-auto flex-col max-w-full">
+        <!-- Hero -->
+        <div class="bg-gray-800">
+          <!-- Header -->
+          <header id="page-header" class="flex flex-none items-center py-10">
+            <div class="flex flex-col text-center sm:flex-row sm:items-center sm:justify-between space-y-6 sm:space-y-0 container xl:max-w-6xl mx-auto px-4 lg:px-8">
+              <div>
+                <a href="#" class="inline-flex items-center space-x-2 font-bold text-lg tracking-wide text-white hover:opacity-75">
+                  <i class="hi-outline hi-link inline-block w-5 h-5 opacity-50" stroke="currentColor" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></i>
+                    <img src="../image/logo.png" class="rounded-full w-12">
+                  <span>Burol Elemntary School</span>
+                </a>
+              </div>
+
+              <nav class="flex items-center justify-center space-x-4 sm:space-x-6 text-sm">
+                <a href="#Cores" class="font-semibold text-gray-300 hover:text-gray-400">
+                  <span>Commitments</span>
+                </a>
+                <a href="#HIW" class="font-semibold text-gray-300 hover:text-gray-400">
+                  <span>How it works?</span>
+                </a>
+                <a href="#location" class="font-semibold text-gray-300 hover:text-gray-400">
+                  <span>Location</span>
+                </a>
+                <a href="../login.php" class="inline-flex items-center space-x-2 font-semibold text-gray-300 hover:text-gray-400">
+                  <svg class="hi-solid hi-user-circle inline-block w-5 h-5 opacity-50" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/></svg>
+                  <span>Sign In</span>
+                </a>
+              </nav>
+
+            </div>
+          </header>
+          <!-- END Header -->
+
+          <!-- Hero Content -->
+          <div class="container xl:max-w-6xl mx-auto px-4 pt-16 lg:px-8 lg:pt-32">
+            <div class="text-center">
+              <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-white">
+                Online Grading System
+              </h2>
+              <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-400 lg:w-2/3 mx-auto">
+                Software description computer studies society, online grading system is an system that that uses internet that allows faculty to manage class grades and submit grades.
+              </h3>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-2 sm:space-y-0 sm:space-x-4 pt-10 pb-16">
+              <a href="#school" class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-6 py-4 leading-6 rounded-full border-blue-700 bg-blue-700 text-white hover:text-white hover:bg-blue-800 hover:border-blue-800 focus:ring focus:ring-blue-500 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700">
+                <span>Explore</span>
+              </a>
+              <a href="../login.php" class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-6 py-4 leading-6 rounded-full border-gray-700 bg-gray-700 text-white hover:text-white hover:bg-gray-800 hover:border-gray-800 focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-700 active:border-gray-700">
+                <span>Sign in</span>
+              </a>
+            </div>
+            <div class="relative mx-5 lg:mx-32 p-2 rounded-xl bg-white -mb-40 shadow-lg">
+              <img id="school" src="../image/8.jpg" alt="Hero Image" class="relative rounded-lg mx-auto"/>
+            </div>
+          </div>
+          <!-- END Hero Content -->
+        </div>
+        <!-- END Hero -->
+
+        <!-- Features Section -->
+        <div class="bg-white pt-40">
+          <div class="space-y-16 container xl:max-w-6xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
+            <!-- Core Heading -->
+            <div id="Cores"  class="text-center">
+              <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+                Core Commitments
+              </h2>
+              <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-600 lg:w-2/3 mx-auto">
+                We built the best tools to elevate your marketing efforts.
+              </h3>
+            </div>
+            <!-- END of Core Heading -->
+
+            <!-- Cores -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12">
+              <div class="py-5 text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 ml-3 mb-12 relative">
+                  <div class="absolute inset-0 rounded-full -m-3 transform bg-blue-900"></div>
+                  <svg viewBox="0 0 48 48" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" class="font-semibold text-xl text-white relative transform transition ease-out duration-150 opacity-90 group-hover:scale-125 group-hover:opacity-100"><path d="M45.303 23.367c.263.387.263.879-.005 1.264C43.455 27.296 35.638 37.5 24 37.5S4.545 27.296 2.702 24.631a1.103 1.103 0 0 1-.005-1.264C4.528 20.697 12.284 10.5 24 10.5s19.472 10.197 21.303 12.867z" fill="#FFFFFF" class="fill-ffffff"></path><path d="M24 38C12.255 38 4.414 27.985 2.291 24.916a1.603 1.603 0 0 1-.007-1.83C4.39 20.015 12.177 10 24 10s19.61 10.015 21.715 13.084l.001.001c.38.559.377 1.278-.008 1.831C43.586 27.985 35.745 38 24 38zm0-27C12.666 11 5.145 20.683 3.109 23.65a.601.601 0 0 0 .003.695C5.167 27.315 12.742 37 24 37s18.833-9.685 20.887-12.654a.603.603 0 0 0 .003-.697C42.854 20.681 35.334 11 24 11z" fill="#0071bd" class="fill-0277bd"></path><circle cx="24" cy="24" fill="#87D6FA" r="10.5" class="fill-87d6fa"></circle><path d="M24 35c-6.065 0-11-4.935-11-11s4.935-11 11-11 11 4.935 11 11-4.935 11-11 11zm0-21c-5.514 0-10 4.486-10 10s4.486 10 10 10 10-4.486 10-10-4.486-10-10-10z" fill="#0071bd" class="fill-0277bd"></path><path d="M24 32.5c-4.688 0-8.501-3.813-8.501-8.5s3.814-8.5 8.501-8.5 8.501 3.813 8.501 8.5-3.813 8.5-8.501 8.5zm0-16c-4.136 0-7.501 3.364-7.501 7.5s3.365 7.5 7.501 7.5 7.501-3.364 7.501-7.5-3.365-7.5-7.501-7.5z" fill="#B3E5FC" class="fill-b3e5fc"></path><circle cx="24" cy="24" fill="#455A64" r="4.5" class="fill-455a64"></circle><path d="M24 29c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zm0-9c-2.206 0-4 1.794-4 4s1.794 4 4 4 4-1.794 4-4-1.794-4-4-4z" fill="#0071bd" class="fill-0277bd"></path><circle cx="30.858" cy="30.75" fill="#FFFFFF" r="2.5" class="fill-ffffff"></circle><circle cx="18.285" cy="18.375" fill="#FFFFFF" r="4.5" class="fill-ffffff"></circle><g fill="#0071bd" class="fill-0277bd"><path d="M30.445 43.479a.501.501 0 0 1-.489-.396l-.832-3.913a.5.5 0 0 1 .978-.208l.832 3.913a.5.5 0 0 1-.489.604zM36.609 41.477a.497.497 0 0 1-.457-.297l-1.627-3.654a.5.5 0 1 1 .913-.407l1.627 3.654a.5.5 0 0 1-.456.704zM42.222 38.236a.498.498 0 0 1-.405-.206l-2.351-3.236a.499.499 0 1 1 .808-.588l2.351 3.236a.499.499 0 0 1-.403.794zM5.778 38.236a.5.5 0 0 1-.403-.794l2.351-3.236a.5.5 0 1 1 .808.588L6.183 38.03a.498.498 0 0 1-.405.206zM11.391 41.477a.5.5 0 0 1-.456-.703l1.627-3.654a.5.5 0 1 1 .913.407l-1.627 3.654a.5.5 0 0 1-.457.296zM17.555 43.479a.5.5 0 0 1-.489-.604l.832-3.913a.5.5 0 0 1 .978.208l-.832 3.913a.5.5 0 0 1-.489.396zM24 44.156a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v4a.5.5 0 0 1-.5.5z"></path></g><g fill="#0071bd" class="fill-0277bd"><path d="M29.614 9.59a.5.5 0 0 1-.489-.604l.832-3.913a.5.5 0 0 1 .978.208l-.832 3.913a.5.5 0 0 1-.489.396zM34.981 11.334a.5.5 0 0 1-.456-.703l1.627-3.654a.499.499 0 1 1 .913.407l-1.627 3.654a.498.498 0 0 1-.457.296zM39.87 14.156a.5.5 0 0 1-.403-.794l2.351-3.236a.5.5 0 1 1 .808.588l-2.351 3.236a.5.5 0 0 1-.405.206zM8.13 14.156a.498.498 0 0 1-.405-.206l-2.351-3.236a.499.499 0 1 1 .808-.588l2.351 3.236a.499.499 0 0 1-.403.794zM13.019 11.334a.497.497 0 0 1-.457-.297l-1.627-3.654a.5.5 0 1 1 .913-.407l1.627 3.654a.5.5 0 0 1-.456.704zM18.386 9.59a.501.501 0 0 1-.489-.396l-.832-3.913a.5.5 0 0 1 .978-.208l.832 3.913a.5.5 0 0 1-.489.604zM24 9a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v4a.5.5 0 0 1-.5.5z"></path></g></svg>
+                </div>
+                <h4 class="text-xl font-bold mb-2">
+                  The DepEd Vision
+                </h4>
+                <p class="leading-relaxed text-gray-600">
+                We dream of Filipinos who passionately love their country and whose values and competencies enable them to realize their full potential and contribute meaningfully to building the nation. As a learner-centered public institution, the Department of Education continuously improves itself to better serve its stakeholders.                
+                </p>
+              </div>
+
+              <div class="py-5 text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 ml-3 mb-12 relative">
+                  <div class="absolute inset-0 rounded-full -m-3 transform bg-blue-900"></div>
+                  <svg data-name="Your Icons" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" class="font-semibold text-xl text-white relative transform transition ease-out duration-150 opacity-90 group-hover:scale-125 group-hover:opacity-100"><path d="M48 64.5a1 1 0 0 1-1-.88V15.88a1 1 0 0 1 2 0v47.74a1 1 0 0 1-1 .88Z" fill="#ffffff" class="fill-000000"></path><path d="M47.15 51.51 45.79 51a52.46 52.46 0 0 1-6.17-2.67c-4.2-2.22-8.24-9.55-8.41-9.86l-1.09-2 2.19-.47c.22-.06 5.52-1.33 12.07 2.87 6.09 3.9 4.59 9.58 3.5 11.43Zm-14-13.68c.79 1.38 4.19 7 7.43 8.75a52.63 52.63 0 0 0 5.69 2.48c.46-1 2.15-5.28-3-8.55s-8.98-2.87-10.14-2.68Z" fill="#ffffff" class="fill-000000"></path><path d="m48.47 51.51-.73-1.25c-1.1-1.84-2.62-7.51 3.5-11.43 6.44-4.13 11.51-3 12.07-2.87l2.19.55-1.09 2c-.17.31-4.21 7.64-8.41 9.86A53.4 53.4 0 0 1 49.84 51ZM61 37.72a16.08 16.08 0 0 0-8.65 2.79c-5.09 3.27-3.42 7.58-3 8.55a51.78 51.78 0 0 0 5.69-2.48c3.24-1.71 6.64-7.38 7.43-8.75a9.69 9.69 0 0 0-1.47-.11ZM47.35 35.25l-1.25-.44a46 46 0 0 1-5.05-2.2c-3.4-1.79-6.58-7.46-6.93-8.1l-1-1.82 2-.51c.19-.05 4.57-1.11 10 2.36 5.09 3.26 3.83 8 2.92 9.56ZM36.15 24c1.21 2.1 3.66 5.67 5.84 6.81a38.71 38.71 0 0 0 4.46 2c.45-1 1.42-4.12-2.42-6.58A12.16 12.16 0 0 0 36.15 24Z" fill="#ffffff" class="fill-000000"></path><path d="m48.27 35.25-.68-1.15c-.92-1.54-2.2-6.28 2.92-9.56 5.3-3.4 9.51-2.48 10-2.36l2 .51-1 1.82c-.35.64-3.53 6.31-6.93 8.1a45.71 45.71 0 0 1-5 2.2ZM58.53 24a12.91 12.91 0 0 0-6.94 2.24c-3.83 2.46-2.87 5.57-2.41 6.58a40.34 40.34 0 0 0 4.45-2c2.18-1.14 4.63-4.71 5.84-6.81a7.69 7.69 0 0 0-.94-.01ZM47.35 20.27l-1.25-.45a44.9 44.9 0 0 1-5.05-2.19c-3.4-1.79-6.58-7.46-6.93-8.1l-1-1.82 2-.51c.19 0 4.57-1.11 10 2.36 5.09 3.26 3.83 8 2.92 9.56ZM36.15 9.05c1.21 2.1 3.66 5.67 5.84 6.81a38.71 38.71 0 0 0 4.46 2c.45-1 1.42-4.12-2.42-6.58a12.1 12.1 0 0 0-7.88-2.23Z" fill="#ffffff" class="fill-000000"></path><path d="m48.27 20.27-.68-1.15c-.92-1.54-2.2-6.28 2.92-9.56 5.3-3.4 9.51-2.48 10-2.36l2 .51-1 1.82c-.35.64-3.53 6.31-6.93 8.1a44.71 44.71 0 0 1-5 2.19ZM58.53 9a12.94 12.94 0 0 0-6.94 2.25c-3.83 2.46-2.87 5.57-2.41 6.58a42.39 42.39 0 0 0 4.45-2c2.18-1.14 4.63-4.71 5.84-6.81a7.39 7.39 0 0 0-.94-.02ZM69 92H52v-5c0-.55-1.05-15.48 10.21-23.81a23.34 23.34 0 0 0 3.87-3.48l12.94-15a5 5 0 0 1 3-1.68V20a5 5 0 0 1 4.76-5 4.87 4.87 0 0 1 3.59 1.36A5.37 5.37 0 0 1 92 20.23v30a28.7 28.7 0 0 0 .33 4.3c.44 3 .6 8.78-3.37 13.2-5.5 6.15-10.16 10.88-15.09 15.88l-2.17 2.18-2.7 1.75Zm-15-2h13v-3.54l3.48-2.28 1.94-2c4.91-5 9.55-9.7 15-15.83 3.43-3.81 3.27-8.88 2.88-11.57a31.15 31.15 0 0 1-.3-4.56v-30a3.33 3.33 0 0 0-1-2.41 2.87 2.87 0 0 0-2.11-.81A3 3 0 0 0 84 20v23.16a5 5 0 0 1 2 1.06 4.92 4.92 0 0 1 1.72 3.4V48a5 5 0 0 1-1.22 3.27L73.28 66.7a1 1 0 0 1-1.51-1.31L85.1 50a2.93 2.93 0 0 0 .73-2v-.2a3 3 0 0 0-1-2A2.88 2.88 0 0 0 83 45h-.2a3 3 0 0 0-2.24 1L67.62 61a25.54 25.54 0 0 1-4.19 3.78C53.07 72.46 54 86.78 54 86.92ZM44.54 92h-17v-4.46l-2.83-1.89-2-2c-4.93-5-9.59-9.73-15.12-15.89-4-4.42-3.82-10.17-3.37-13.2a30.05 30.05 0 0 0 .32-4.3v-30a5.38 5.38 0 0 1 1.66-3.89A4.86 4.86 0 0 1 9.78 15a4.93 4.93 0 0 1 3.29 1.45A5 5 0 0 1 14.54 20v23.08a5 5 0 0 1 3 1.68l12.94 15a23.34 23.34 0 0 0 3.87 3.48c11.26 8.33 10.25 23.26 10.2 23.89Zm-15-2h13v-3c0-.22 1-14.54-9.39-22.2A25.14 25.14 0 0 1 29 61L16 46.06a3 3 0 0 0-2.25-1h-.18a2.93 2.93 0 0 0-1.8.72 3 3 0 0 0-1 2v.23a2.94 2.94 0 0 0 .71 1.99l13.33 15.39a1 1 0 0 1-1.51 1.31L10 51.3A5 5 0 0 1 8.74 48v-.38a5 5 0 0 1 1.72-3.41 4.85 4.85 0 0 1 2.06-1.07V20a3 3 0 0 0-.88-2.13 3 3 0 0 0-2-.87 2.84 2.84 0 0 0-2.11.82 3.34 3.34 0 0 0-1 2.41v30a31.13 31.13 0 0 1-.34 4.59c-.4 2.69-.55 7.76 2.88 11.57 5.5 6.13 10.14 10.84 15.05 15.83l1.94 2 3.47 2.28Z" fill="#ffffff" class="fill-000000"></path></svg>
+                </div>
+                <h4 class="text-xl font-bold mb-2">
+                  The DepEd Core Values
+                </h4>
+                <p class="leading-relaxed text-gray-600">
+                Maka-Diyos <br>
+                Maka-tao <br>
+                Makakalikasan <br>
+                Makabansa               
+                </p>
+              </div>
+
+              <div class="py-5 text-center">
+                <div class="inline-flex items-center justify-center w-16 h-16 ml-3 mb-12 relative">
+                  <div class="absolute inset-0 rounded-full -m-3 transform bg-blue-900"></div>
+                  <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" class="font-semibold text-xl text-white relative transform transition ease-out duration-150 opacity-90 group-hover:scale-125 group-hover:opacity-100"><path d="M62.233 12.845a3.466 3.466 0 0 0-2.877-1.94l-3.002-.277 5.282-5.33a1.824 1.824 0 0 0-2.59-2.569l-5.31 5.359L53.452 5a3.466 3.466 0 0 0-1.94-2.876 3.29 3.29 0 0 0-3.715.673L43.86 6.733a1.829 1.829 0 0 0-.528 1.46l.686 7.456a4.391 4.391 0 0 1-1.254 3.493L29.02 33.006a1.83 1.83 0 0 0 .01 2.59 1.79 1.79 0 0 0 1.285.522 1.826 1.826 0 0 0 1.295-.532l13.824-13.944a4.392 4.392 0 0 1 3.52-1.28l7.21.662c.056.005.112.007.167.007a1.826 1.826 0 0 0 1.292-.535l3.937-3.936a3.288 3.288 0 0 0 .673-3.715Zm-6.588 4.46-7.87-.723-.724-7.87L49.864 5.9l.584 6.357a1.827 1.827 0 0 0 1.653 1.652l6.356.585Z" fill="#ffffff" class="fill-000000"></path><path d="M33.875 24.558a10.411 10.411 0 1 0 6.146 6.095l-6.643 6.7a4.328 4.328 0 0 1-6.134-6.107Z" fill="#ffffff" class="fill-000000"></path><path d="m55.935 23.513-7.21-.662a1.864 1.864 0 0 0-.173-.008 1.903 1.903 0 0 0-1.342.56l-1.56 1.572a18.012 18.012 0 1 1-6.145-6.095l1.484-1.498a1.887 1.887 0 0 0 .54-1.504l-.685-7.456c-.007-.075.007-.148.004-.224A28.127 28.127 0 1 0 56.32 23.531c-.126 0-.255-.006-.385-.018Z" fill="#ffffff" class="fill-000000"></path></svg>                
+                </div>
+                <h4 class="text-xl font-bold mb-2">
+                  The DepEd Mission  
+                </h4>
+                <p class="leading-relaxed text-gray-600">
+                To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:
+                Students learn in a child-friendly, gender-sensitive, safe, and motivating environment.
+                Teachers facilitate learning and constantly nurture every learner.
+                Administrators and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.
+                Family, community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.              
+                </p>
+              </div>
+
+            </div>
+            <!-- END of Cores -->
+
+          </div>
+        </div>
+        <!-- END of Core Commitments -->
+
+        <!-- How it works -->
+        <div class="bg-white relative">
+          <div class="absolute inset-0 transform skew-y-1 bg-blue-900"></div>
+          <div class="relative container xl:max-w-7xl mx-auto px-4 py-16 lg:px-8 lg:py-32 space-y-16">
+             <!-- Heading -->
+             <div class="text-center" id="HIW">
+              <h2 class="text-3xl md:text-4xl font-extrabold text-white">
+                How it works?
+              </h2>
+            </div>
+            <!-- END Heading -->
+
+            <!-- Steps -->
+            <div class="grid grid-cols-1 gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              <div class="p-10 bg-white bg-opacity-5 shadow-sm hover:bg-opacity-10 transition rounded-3xl">
+                <svg class="hi-solid hi-desktop-computer inline-block w-12 h-12 text-blue-300 mb-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"/></svg>
+                <h4 class="text-lg font-bold text-white mb-2">
+                  1. LOGIN/SIGNUP
+                </h4>
+                <p class="leading-relaxed text-white text-opacity-75 text-sm">
+                  This part generally displays as the face or very front of the system in order to access and modify any information within the system, it has Two part wherein log in with an account or sign up to create an account.  
+                </p>
+              </div>
+              <div class="p-10 bg-white bg-opacity-5 shadow-sm hover:bg-opacity-10 transition rounded-3xl">
+                <svg stroke="currentColor" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="text-blue-300 mb-5 hi-outline hi-cube inline-block w-12 h-12"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+                <h4 class="text-lg font-bold text-white mb-2">
+                  2. GENERAL DASHBOARD
+                </h4>
+                <p class="leading-relaxed text-white text-opacity-75 text-sm">
+                  Once you entered the system, dashboard is where you headed. On this part, you can clearly view the things that can generally see in any common dashboard. All the subjects that is undertaken by the students of the specified school are inside and written to record the things as their basis of their grades. 
+                </p>
+              </div>
+              <div class="p-10 bg-white bg-opacity-5 shadow-sm hover:bg-opacity-10 transition rounded-3xl sm:col-span-2 lg:col-span-1">
+                <svg class="hi-solid hi-pencil inline-block w-12 h-12 text-blue-300 mb-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/></svg>
+                <h4 class="text-lg font-bold text-white mb-2">
+                  3. ADMINISTRATOR APPROVAL
+                </h4>
+                <p class="leading-relaxed text-white text-opacity-75 text-sm">
+                  After collecting all the data that is provided by the students and recorded by the teachers, the conclusion part is where the grade is being process. When the grade is in a final state, the administrator of the system will approve and confirm that the information is true and valid to be published to the students.
+                </p>
+              </div>
+            </div>
+            <!-- END Steps -->
+          </div>
+        </div>
+        <!-- How it works -->
+
+        <!-- Start of Location -->
+        <div class="bg-white">
+          <div class="space-y-10 container xl:max-w-4xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
+            <!-- Location Heading -->
+            <div class="text-center" id="location">
+              <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+                Location of Burol Elementary School
+              </h2>
+              <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-600 lg:w-2/3 mx-auto">
+                "The future belongs to those who believe in the beauty of their dreams"
+              </h3>
+            </div>
+            <!-- End of Locaiton Heading -->
+
+            <!-- location picture -->
+            <div class="relative -ml-52 rounded-xl -mb-40">
+               <div id="map"></div>
+            </div>
+            <!-- End of Location -->
+          </div>
+        </div>
+        <!-- END Pricing Section -->
+
+        <!-- Stats Section  for edit-->
+        <div class="bg-gray-800">
+          <div class="container xl:max-w-7xl mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 text-center divide-y sm:divide-y-0 sm:divide-x divide-gray-700">
+              <dl class="space-y-1 px-5 py-16 lg:py-32">
+                <dt class="text-4xl font-extrabold text-white">
+                  100+
+                </dt>
+                <dd class="text-sm uppercase tracking-wide font-semibold text-blue-400">
+                  Grade 3 Students
+                </dd>
+              </dl>
+              <dl class="space-y-1 px-5 py-16 lg:py-32">
+                <dt class="text-4xl font-extrabold text-white">
+                  10+
+                </dt>
+                <dd class="text-sm uppercase tracking-wide font-semibold text-blue-400">
+                  Teachers
+                </dd>
+              </dl>
+              <dl class="space-y-1 px-5 py-16 lg:py-32">
+                <dt class="text-4xl font-extrabold text-white">
+                  5+
+                </dt>
+                <dd class="text-sm uppercase tracking-wide font-semibold text-blue-400">
+                  Administrators
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <!-- Stats Section -->   
+      </main>
+      <!-- END Page Content -->
+    </div>
+    <!-- END Page Container -->
+  </body>
+  <script>
+    // var map = L.map('map').setView([14.18738, 121.12642], 13);
+    var map = L.map('map').setView([14.20084, 121.13950], 12);
+
+    //Layers of maps
+
+    //default
+    var def = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    });
+    def.addTo(map);
+
+    //google street
+    googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+    });
+    // googleStreets.addTo(map);
+
+    //satellite
+    googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+    });
+    // googleSat.addTo(map);
+
+    // Marker and icon
+    var myIcon = L.icon({
+        className: 'animated',
+        iconUrl: 'img/red-pin.png',
+        iconSize: [38, 40],
+        
+    });
+    
+
+  
+    //Burol Elementary
+    var marker1 = L.marker([14.16084, 121.09950], {icon: myIcon, bounceOnAdd: true, bounceOnAddOptions: {duration: 1000, height: 50}})
+        .addTo(map)
+        .bindPopup("<h2> BUROL ELEMENTARY</h2><br> <img class='picture' src='img/school.jpg'/> ")
+        // .openPopup();
+
+    //City College of Calamba
+    var marker2 = L.marker([14.21213, 121.16760], {icon: myIcon, bounceOnAdd: true, bounceOnAddOptions: {duration: 1000, height: 50}})
+        .addTo(map)
+        .bindPopup("<h2> City College of Calamba </h2><br> <img class='picture' src='img/ccc.jpg'/> ")
+        // .openPopup();
+
+    //Layer Control
+    var baseMaps = {
+    "Default": def,
+    "Google Street": googleStreets,
+    "Google Satellite": googleSat
+    };
+
+    var overlayMaps = {
+        "First Marker": marker1,
+        "Second Marker": marker2
+    };
+
+    L.control.layers(baseMaps, overlayMaps).addTo(map);
+    
+</script>
+</html>
